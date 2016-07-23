@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
@@ -23,33 +22,17 @@ module.exports = React.createClass({
             background: 'lightgray',
           }}
         >
-          <Container
+          <Link
+            to={prefixLink('/')}
             style={{
-              maxWidth: 960,
-              paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
+              color: 'black',
+              textDecoration: 'none',
             }}
           >
-            <Link
-              to={prefixLink('/')}
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              Kurac
-            </Link>
-          </Container>
+            Kurac
+          </Link>
         </Headroom>
-        <Container
-          style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children}
-        </Container>
+        {this.props.children}
       </div>
     )
   },
