@@ -22,7 +22,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <html lang="en">
+      <html lang="en" style={{ height: '100%' }}>
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -35,8 +35,12 @@ module.exports = React.createClass({
           <TypographyStyle typography={typography} />
           {css}
         </head>
-        <body>
-          <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+        <body style={{ height: '100%' }}>
+          <div
+            id="react-mount"
+            style={{ height: '100%' }}
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
+          />
           <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
         </body>
       </html>

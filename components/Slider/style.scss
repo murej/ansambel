@@ -1,0 +1,17 @@
+.Slider {
+  height: 100%;
+  position: relative;
+
+  .Slider-NextButton {
+    position: absolute;
+    left: 50%; top: 0;
+    width: 50%;
+    height: 100%;
+  }
+  .Slider-PrevButton {
+    position: absolute;
+    left: 0; top: 0;
+    width: 50%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+.Grid {
+  display: flex;
+
+  &--bleeding {
+    margin: 0;
+    .Grid-Content {
+      flex: 12;
+    }
+  }
+  &--wide {
+    margin: 0 10px;
+    .Grid-Content {
+      flex: 12;
+    }
+  }
+  &--normal {
+    margin: 0 10px;
+    .Grid-Margin {
+      flex: 2;
+    }
+    .Grid-Content {
+      flex: 8;
+    }
+  }
+  &--narrow {
+    margin: 0 10px;
+    .Grid-Margin {
+      flex: 3;
+    }
+    .Grid-Content {
+      flex: 6;
+    }
+  }
+}

@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Headroom from 'react-headroom'
 
 import { rhythm } from 'utils/typography'
+
+import Header from '../components/Header'
 
 module.exports = React.createClass({
   propTypes () {
@@ -13,25 +12,8 @@ module.exports = React.createClass({
   },
   render () {
     return (
-      <div>
-        <Headroom
-          wrapperStyle={{
-            marginBottom: rhythm(1),
-          }}
-          style={{
-            background: 'lightgray',
-          }}
-        >
-          <Link
-            to={prefixLink('/')}
-            style={{
-              color: 'black',
-              textDecoration: 'none',
-            }}
-          >
-            Kurac
-          </Link>
-        </Headroom>
+      <div style={{ height: '100%' }}>
+        <Header />
         {this.props.children}
       </div>
     )

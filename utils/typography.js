@@ -1,16 +1,21 @@
 import Typography from 'typography'
 
 const options = {
-  baseFontSize: '16px',
+  baseFontSize: '20px',
   baseLineHeight: '24px',
   headerFontFamily: [
     'Helvetica Neue',
     'Helvetica',
     'Arial',
-    'sans-serif'
+    'sans-serif',
   ],
-  bodyFontFamily: ['georgia', 'serif'],
-  bodyWeight: 300,
+  bodyFontFamily: [
+    'Helvetica Neue',
+    'Helvetica',
+    'Arial',
+    'sans-serif',
+  ],
+  bodyWeight: 400,
   headerWeight: 600,
   boldWeight: 600,
 }

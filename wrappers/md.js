@@ -3,6 +3,8 @@ import 'css/markdown-styles.css'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 
+import Grid from '../components/Grid'
+
 module.exports = React.createClass({
   propTypes () {
     return {
@@ -13,10 +15,14 @@ module.exports = React.createClass({
     const post = this.props.route.page.data
     return (
       <DocumentTitle title={`${config.siteTitle} | ${post.title}`}>
-        <div className="markdown">
-          <h1>{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.body }} />
-        </div>
+        <Grid type="narrow">
+          <div className="markdown" style={{
+              backgroundColor: post.backgroundColor
+            }}>
+            <h1>{post.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: post.body }} />
+          </div>
+        </Grid>
       </DocumentTitle>
     )
   },
