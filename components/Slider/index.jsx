@@ -2,7 +2,6 @@ import React from 'react'
 import { prefixLink } from 'gatsby-helpers'
 import _ from 'lodash'
 import './style.scss'
-import './slick.css'
 
 // import Slider from 'react-slick'
 import Slide from '../Slide'
@@ -13,6 +12,10 @@ const slides = [
     type={'normal'}
     imageUrl={prefixLink('/assets/images/fotopub4.jpg')}
     caption={'prvi'}
+    ratios={{
+      horizontal: [1,3,8],  // razmerje širine grida
+      vertical: [20,20,60]  // procent višine screena
+    }}
   />,
   <Slide
     key="1"
@@ -25,6 +28,10 @@ const slides = [
     type={'normal'}
     imageUrl={prefixLink('/assets/images/koordinate_zvoka_2.jpg')}
     caption={'tretji'}
+    ratios={{
+      horizontal: [2,6,2],
+      vertical: [50,6,6]
+    }}
   />,
   <Slide
     key="3"
@@ -37,19 +44,27 @@ const slides = [
     type={'normal'}
     imageUrl={prefixLink('/assets/images/4.jpg')}
     caption={'peti'}
+    ratios={{
+      horizontal: [2,6,2],
+      vertical: [2,6,6]
+    }}
   />,
   <Slide
     key="5"
     type={'normal'}
     imageUrl={prefixLink('/assets/images/Dan_documentation.jpg')}
     caption={'šesti'}
+    ratios={{
+      horizontal: [2,6,2],
+      vertical: [2,6,6]
+    }}
   />,
 ]
 
 export default class SliderComponent extends React.Component {
   constructor () {
     super()
-    const randomStart = _.random(0, slides.length - 1)
+    const randomStart = 0//_.random(0, slides.length - 1)
     for(let i=0; i<randomStart; i++) {
       slides.push(slides.shift());
     }

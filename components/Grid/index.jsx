@@ -1,4 +1,5 @@
 import React from 'react'
+import _ from 'lodash'
 import cx from 'classnames'
 import './style.scss'
 
@@ -14,6 +15,7 @@ class GridComponent extends React.Component {
     const isNormalType = type === 'normal'
     const isNarrowType = type === 'narrow'
     const hasMargins = isNormalType || isNarrowType
+    const hasRatio = !_.isEmpty(this.props.ratio);
 
     let className = cx({
       'Grid': true,
@@ -24,9 +26,9 @@ class GridComponent extends React.Component {
     })
     return (
       <div className={className}>
-        {hasMargins && <div className="Grid-Margin" />}
-        <div className="Grid-Content">{this.props.children}</div>
-        {hasMargins && <div className="Grid-Margin" />}
+        {hasMargins && <div className="Grid-Margin" style={{ flex: hasRatio && this.props.ratio[0] }}/>}
+        <div className="Grid-Content" style={{ flex: hasRatio && this.props.ratio[1] }}>{this.props.children}</div>
+        {hasMargins && <div className="Grid-Margin" style={{ flex: hasRatio && this.props.ratio[2] }}/>}
       </div>
     )
   }
