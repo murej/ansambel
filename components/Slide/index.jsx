@@ -14,8 +14,8 @@ class SlideComponent extends React.Component {
               className="Slide-Image"
               src={this.props.imageUrl}
             />
+            <p className="Slide-Caption"><span className="Slide-CaptionBg">{this.props.caption}</span></p>
           </div>
-          <p className="Slide-Caption">{this.props.caption}</p>
         </Grid>
       </div>
     )

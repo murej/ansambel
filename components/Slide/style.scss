@@ -1,34 +1,45 @@
 .Slide {
+  position: absolute;
   height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 
   .Grid {
     height: 100%;
 
     &--bleeding {
       .Slide-ImageContainer {
+        position: relative;
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         overflow: hidden;
-        margin-bottom: -34px;
-      }
-      .Slide-Caption {
-        text-align: center;
-        margin: 0 0 -10px 0;
+        img {
+          // margin-bottom: -34px;
+        }
+        .Slide-Caption {
+          position: absolute;
+          text-align: center;
+          bottom: -10px;
+          width: 100%;
+        }
       }
     }
     &:not(.Grid--bleeding) {
       .Grid-Content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
 
         .Slide-ImageContainer {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          justify-content: center;
           height: 80vh;
-          margin-top: 10vh;
+          // margin-top: 10vh;
 
           img.Slide-Image {
             display: block;
@@ -36,15 +47,17 @@
             height: auto;
             max-height: 100%;
             max-width: 100%;
-            margin: 0 auto;
+            margin: 0 auto 10px auto;
+          }
+          .Slide-Caption {
+            text-align: center;
+            margin-bottom: 0;
           }
         }
-        .Slide-Caption {
-          text-align: center;
-          margin: 0 0 10px 0;
-        }
+      }
     }
-
+    .Slide-CaptionBg {
+      background-color: white;
     }
   }
 }

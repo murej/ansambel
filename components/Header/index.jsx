@@ -31,7 +31,7 @@ export default class HeaderComponent extends React.Component {
               textDecoration: 'none',
             }}
           >
-            Info
+            What?
           </Link>
         </Grid>
       </div>
