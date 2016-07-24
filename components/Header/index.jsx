@@ -16,7 +16,7 @@ export default class HeaderComponent extends React.Component {
       <div className="Header">
         <Grid type="wide">
           <Link
-            to={prefixLink('/')}
+            to={'/'}
             style={{
               color: 'black',
               textDecoration: 'none',
@@ -25,7 +25,7 @@ export default class HeaderComponent extends React.Component {
             Ansambel
           </Link>
           <Link
-            to={prefixLink('/info/')}
+            to={'/info/'}
             style={{
               color: 'black',
               textDecoration: 'none',
