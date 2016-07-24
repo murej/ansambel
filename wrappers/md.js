@@ -16,9 +16,18 @@ module.exports = React.createClass({
     return (
       <DocumentTitle title={`${config.siteTitle} | ${post.title}`}>
         <Grid type="narrow">
-          <div className="markdown" style={{
+          <div
+            style={{
+              position: 'fixed',
+              top: '0',
+              left: '0',
+              width: '100%',
+              height: '100%',
+              zIndex: '-1',
               backgroundColor: post.backgroundColor
-            }}>
+            }}
+          />
+          <div className="markdown">
             <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
           </div>
